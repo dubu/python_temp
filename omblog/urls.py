@@ -5,11 +5,6 @@ from omblog.feeds import PostFeed
 urlpatterns = patterns(
     '',
 
-
-    url(r'^index/$',
-        'omblog.views.index',
-        name='index'),
-
     url(r'^feed\.rss$', PostFeed(), name='feed'),
 
     url(r'^login/$',
@@ -48,5 +43,10 @@ urlpatterns = patterns(
     url(r'^(?P<year>\d{4})/(?P<month>\d{1,2})/$',
         'omblog.views.month',
         name='month'),
+
+    url(r'^index/$',
+        'omblog.views.index',
+        name='index'),
+
 
 )
