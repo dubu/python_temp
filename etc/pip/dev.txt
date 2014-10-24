@@ -1,0 +1,2 @@
+-r tests.txt
+Sphinx==1.2
