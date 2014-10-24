@@ -178,9 +178,11 @@ def index(request):
 def month(request, year, month):
     """The month archive"""
     date = datetime.date(year=int(year), month=int(month), day=1)
-    posts = Post.objects.visible(user=request.user).filter(
-        created__year=year,
-        created__month=month)
+    # posts = Post.objects.visible(user=request.user).filter(
+    #     created__year=year,
+    #     created__month=month)
+
+    posts  = Post.objects.filter(created__year=2014)
 
     return render_to_response('omblog/month.html', {
         'posts': posts,
