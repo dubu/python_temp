@@ -5,14 +5,6 @@ from omblog.feeds import PostFeed
 urlpatterns = patterns(
     '',
 
-    url(r'^index/$',
-        'omblog.views.index',
-        name='index'),
-
-    url(r'^student/$',
-        'omblog.views.index',
-        name='index'),
-
     url(r'^feed\.rss$', PostFeed(), name='feed'),
 
     url(r'^login/$',
@@ -52,5 +44,8 @@ urlpatterns = patterns(
         'omblog.views.month',
         name='month'),
 
+    url(r'^index/$',
+        'omblog.views.index',
+        name='index'),
 
     )
